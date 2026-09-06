@@ -24,6 +24,10 @@ An embedded parking assistance system designed to detect obstacles behind a vehi
 | 30–120 cm | Warning | Orange LED + intermittent buzzer |
 | < 30 cm | Danger | Red LED + continuous buzzer |
 
+## Demo
+
+https://github.com/user-attachments/assets/bc538c41-8819-4f81-816a-ca2c7c64de7e
+
 ## Components
 
 - STM32 NUCLEO-L031K6
@@ -50,5 +54,4 @@ This project was built and tested in [Wokwi](https://wokwi.com/), using `diagram
 - Digital Electronics
 - Wokwi
 
-##Demo
-https://github.com/user-attachments/assets/bc538c41-8819-4f81-816a-ca2c7c64de7e
+
