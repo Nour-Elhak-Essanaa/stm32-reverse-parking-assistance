@@ -1,0 +1,487 @@
+{
+  "version": 1,
+  "author": "Nour Elhak Essanaa",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-st-nucleo-l031k6",
+      "id": "nucleo",
+      "top": -37.19,
+      "left": 22.75,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -65.7,
+      "left": -205.7,
+      "attrs": {
+        "distance": "100"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 130.8,
+      "left": -178.6,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 138.35,
+      "left": -76.8,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 15.6,
+      "left": -197.8,
+      "attrs": {
+        "color": "orange"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 99.95,
+      "left": -115.2,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "sw1",
+      "top": 81.2,
+      "left": -236.9,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -122.4,
+      "left": -27,
+      "attrs": {
+        "volume": "0.1"
+      }
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr1",
+      "top": -154.8,
+      "left": 63.04,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-74hc595",
+      "id": "sr2",
+      "top": -154.8,
+      "left": 149.44,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg2",
+      "top": -206.22,
+      "left": -186.92,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -206.22,
+      "left": -100.52,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "$serialMonitor:TX",
+      "nucleo:VCP_RX",
+      "",
+      []
+    ],
+    [
+      "$serialMonitor:RX",
+      "nucleo:VCP_TX",
+      "",
+      []
+    ],
+    [
+      "ultrasonic1:VCC",
+      "nucleo:5V",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "ultrasonic1:GND",
+      "nucleo:GND.2",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "ultrasonic1:TRIG",
+      "nucleo:D2",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "ultrasonic1:ECHO",
+      "nucleo:D3",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led2:A",
+      "nucleo:D6",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led2:C",
+      "r2:1",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "r2:2",
+      "nucleo:GND.2",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "r1:2",
+      "nucleo:GND.2",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led1:C",
+      "r1:1",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "led1:A",
+      "nucleo:D9",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sw1:2",
+      "nucleo:D4",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sw1:1",
+      "nucleo:GND.2",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "bz1:1",
+      "nucleo:GND.2",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "bz1:2",
+      "nucleo:D5",
+      "green",
+      [
+        "v105.6",
+        "h18.8"
+      ]
+    ],
+    [
+      "nucleo:D10",
+      "sr1:STCP",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "nucleo:D10",
+      "sr2:STCP",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "nucleo:D11",
+      "sr2:SHCP",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "nucleo:D11",
+      "sr1:SHCP",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "nucleo:D12",
+      "sr1:DS",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "sr1:Q7S",
+      "sr2:DS",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "sr1:VCC",
+      "nucleo:5V",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr1:MR",
+      "nucleo:5V",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr2:VCC",
+      "nucleo:5V",
+      "red",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr2:MR",
+      "nucleo:5V",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr1:OE",
+      "nucleo:GND.2",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr1:GND",
+      "nucleo:GND.2",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr2:GND",
+      "nucleo:GND.2",
+      "black",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr2:OE",
+      "nucleo:GND.2",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr1:Q0",
+      "sevseg2:A",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr1:Q1",
+      "sevseg2:B",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr1:Q2",
+      "sevseg2:C",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr1:Q3",
+      "sevseg2:D",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr1:Q4",
+      "sevseg2:E",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr1:Q5",
+      "sevseg2:F",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr1:Q6",
+      "sevseg2:G",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr1:Q7",
+      "sevseg2:DP",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sevseg2:COM.1",
+      "nucleo:3V3",
+      "green",
+      [
+        "h0"
+      ]
+    ],
+    [
+      "sr2:Q0",
+      "sevseg1:A",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr2:Q1",
+      "sevseg1:B",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr2:Q2",
+      "sevseg1:C",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr2:Q3",
+      "sevseg1:D",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr2:Q4",
+      "sevseg1:E",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr2:Q5",
+      "sevseg1:F",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr2:Q6",
+      "sevseg1:G",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sr2:Q7",
+      "sevseg1:DP",
+      "green",
+      [
+        "v0"
+      ]
+    ],
+    [
+      "sevseg1:COM.1",
+      "nucleo:3V3",
+      "green",
+      [
+        "h0"
+      ]
+    ]
+  ],
+  "dependencies": {}
+}
