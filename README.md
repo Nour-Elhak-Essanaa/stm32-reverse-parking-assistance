@@ -49,3 +49,6 @@ This project was built and tested in [Wokwi](https://wokwi.com/), using `diagram
 - Embedded Systems
 - Digital Electronics
 - Wokwi
+
+##Demo
+https://github.com/user-attachments/assets/bc538c41-8819-4f81-816a-ca2c7c64de7e
